@@ -1,0 +1,21 @@
+<ul>
+  <li>Blah blah blah 1</li>
+  <li>Blah blah blah 2</li>
+  <li>Blah blah blah 3</li>
+</ul>
+
+<div>
+  <a [routerLink]="[{ outlets: { sidebar: null } }]">Close (as link)</a>
+</div>
+<div>
+  <button (click)="close0()">Close (no 'relativeTo')</button>
+</div>
+<div>
+  <button (click)="close1()">Close (using ActivatedRoute)</button>
+</div>
+<div>
+  <button (click)="close2()">Close (using Shell's ActivatedRoute)</button>
+</div>
+<div>
+  <button (click)="close3()">Close (using Shell's ActivatedRoute parent)</button>
+</div>
