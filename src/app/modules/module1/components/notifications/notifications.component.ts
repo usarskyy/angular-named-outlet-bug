@@ -21,6 +21,10 @@ export class NotificationsComponent {
     await this.router.navigate([{ outlets: { sidebar: null } }], { relativeTo: this.activatedRoute });
   }
 
+  async close1v2() {
+    await this.router.navigate([{ outlets: { sidebar: null } }], { relativeTo: this.activatedRoute.parent });
+  }
+
   async close2() {
     await this.router.navigate([{ outlets: { sidebar: null } }], { relativeTo: this.shellActivatedRoute });
   }
