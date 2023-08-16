@@ -5,7 +5,7 @@ import { ShellComponent } from './pages';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'artificially-added-level',
     component: ShellComponent,
     children: [
       {
@@ -48,7 +48,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: '',
+    redirectTo: 'artificially-added-level',
     pathMatch: 'full',
   },
 ];
