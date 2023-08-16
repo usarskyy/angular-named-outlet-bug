@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './admin/admin.component';
+import { WrapperAroundModule1Component } from './wrapper-around-module1/wrapper-around-module1.component';
 
 const routes: Routes = [
   {
@@ -10,7 +11,13 @@ const routes: Routes = [
     children: [
       {
         path: 'finances',
-        loadChildren: () => import('./modules/module1').then(m => m.Module1Module),
+        component: WrapperAroundModule1Component,
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('./modules/module1').then(m => m.Module1Module),
+          },
+        ]
       },
     ]
   },
