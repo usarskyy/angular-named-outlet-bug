@@ -1,3 +1,5 @@
-<p>Tabs: <a routerLink="finances">Finances</a></p>
+<div>
+  <input [formControl]="form.controls.name" />
+</div>
 
-<router-outlet></router-outlet>
+{{form.controls.name.value}}

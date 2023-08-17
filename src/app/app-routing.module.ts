@@ -6,13 +6,6 @@ const routes: Routes = [
   {
     path: 'admin',
     component: AdminComponent,
-
-    children: [
-      {
-        path: 'finances',
-        loadChildren: () => import('./modules/module1').then(m => m.Module1Module),
-      },
-    ]
   },
   {
     path: '**',
